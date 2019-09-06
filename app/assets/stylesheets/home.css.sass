@@ -1,0 +1,69 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header
+  border-bottom: 2px solid #eee  
+  background: #fff
+  .logo
+    text-shadow: 1px 1px #fad123
+    color: #fd8762
+  .header_logo
+    text-align: center
+  .menu_list
+    padding-top: 10px
+    li
+      margin-right: 40px
+.maincontent
+  background-image: image-url('bg-bl.jpg')
+  background-position: left top
+  background-repeat: repeat
+  background-size: auto
+  padding: 1.4em 0
+  .title-center
+    text-align: center
+    font-size: 30px
+    letter-spacing: .2rem
+    color: white
+    font-weight: 800
+  .box
+    margin: 10px 0 5px 0
+    padding-right: 10px !important
+    height: auto
+    border-radius: 3px
+    .content
+      background-color: #fff
+      border-radius: 10px
+      overflow: hidden
+      transition: box-shadow 0.5s
+      &:hover
+        box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+      .img
+        width: 100%
+        height: 200px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        background-image: image-url('spa.jpeg')
+      .text
+        margin-top: 10px
+        padding: 5px 10px 10px 10px
+        font-size: 1.5rem
+        font-weight: 800
+        line-height: 22px
+  .hieuung
+    @keyframes latqualatlai
+      0%
+        transform: skewY(10deg)
+      100%
+        transform: skewY(-10deg)     
+    &:hover
+      &:first-child
+        display: inline-block
+        transform: skew(20deg)
+        animation: latqualatlai 2s infinite
+        animation-direction: alternate
+      &:nth-child(2)
+        display: inline-block
+        transition: transform 1s
+        transform: rotate(360deg)
+        

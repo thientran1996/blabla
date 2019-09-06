@@ -1,0 +1,45 @@
+doctype html
+html lang='en'
+  head
+    = stylesheet_link_tag :application
+
+    script src="https://code.jquery.com/jquery-1.12.4.js"
+    script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  body
+    javascript:
+      $( function() {
+        $( ".sortable" ).sortable();
+      } );
+    header
+      navbar.navbar-expand-lg.navbar-light
+        .container
+          .row.no-gutters
+            .header_logo.col-lg-3.col-md-12
+              = link_to '#', class: 'navbar-brand' do
+                h1.logo = 'sortable'
+            .menu_list.col-lg-9.d-none.d-lg-block
+              .collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                  - (1..5).each_with_index do |index|
+                    li.nav-item
+                      = link_to "Menu #{index}", root_path, class: 'nav-link'
+      .maincontent
+        .container
+          h2.title-center
+            = 'Jquery Sortable'
+          .main_content.row.no-gutters.sortable
+            - (1..18).each_with_index do |index|
+              .box.col-lg-2.col-sm-4.col-xs-3
+                .content
+                  .img
+                  .text
+                    = "#{index} bla bla"
+          h2.title-center
+            = 'Animations , Transforms'
+          .main_content.row.no-gutters
+            - (1..2).each_with_index do |index|
+              .box.col-lg-6.hieuung
+                .content
+                  .img
+                  .text
+                    = "#{index} bla bla"
